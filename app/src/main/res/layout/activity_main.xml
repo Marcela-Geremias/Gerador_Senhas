@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gerador de Senhas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Campo para exibir a senha gerada -->
+    <TextView
+        android:id="@+id/tvGeneratedPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Senha gerada"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Slider para definir o comprimento da senha -->
+    <TextView
+        android:id="@+id/tvLengthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comprimento da senha:"
+        app:layout_constraintTop_toBottomOf="@id/tvGeneratedPassword"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbLength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:min="4"
+        android:progress="12"
+        app:layout_constraintTop_toBottomOf="@id/tvLengthLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Opções de configuração -->
+    <CheckBox
+        android:id="@+id/cbUpperCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir letras maiúsculas"
+        app:layout_constraintTop_toBottomOf="@id/sbLength"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbLowerCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir letras minúsculas"
+        app:layout_constraintTop_toBottomOf="@id/cbUpperCase"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir números"
+        app:layout_constraintTop_toBottomOf="@id/cbLowerCase"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbExcludeSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir caracteres semelhantes (i, l, 1, O, 0)"
+        app:layout_constraintTop_toBottomOf="@id/cbNumbers"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botões -->
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gerar Senha"
+        app:layout_constraintTop_toBottomOf="@id/cbExcludeSimilar"
+        android:layout_marginVertical="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        />
+
+    <Button
+        android:id="@+id/btnCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Copiar Senha"
+        app:layout_constraintTop_toBottomOf="@id/btnGenerate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginVertical="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
