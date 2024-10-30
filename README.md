@@ -5,7 +5,7 @@ This project is a password generator app developed in Android Studio with Kotlin
 
 ## Layout
 <div align="center">
-  <img src="./imagens/criador_de_senhas.png" alt="App Screenshot" width="400"/>
+  <img src="./imagens/gerador_de_senhas.png" alt="App Screenshot" width="400"/>
 </div>
 
 ## Technologies Used
